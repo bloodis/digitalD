@@ -11,7 +11,7 @@ public class Int {
 	public Int(int Int) {
 	  
 	  this.Int = Int;
-	  this.INT = (Int >= 10 ? Math.floor((Int-10)/2) : Math.floor(Int/2));
+	  this.INT = (Int >= 10 ? Math.floor((Int-10)/2) : Math.floor((Int-10)/2));
 	}
 
 	public int getInt() {

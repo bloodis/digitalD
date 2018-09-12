@@ -11,7 +11,7 @@ public class Car {
 	public Car(int Car) {
 	  
 	  this.Car = Car;
-	  this.CAR = (Car >= 10 ? Math.floor((Car-10)/2) : Math.floor(Car/2));
+	  this.CAR = (Car >= 10 ? Math.floor((Car-10)/2) : Math.floor((Car-10)/2));
 	}
 
 	public int getCar() {

@@ -11,7 +11,7 @@ public class For {
 	public For(int For) {
 		
 		this.For = For;
-		this.FOR = (For >= 10 ? Math.floor((For-10)/2) : Math.floor(For/2));
+		this.FOR = (For >= 10 ? Math.floor((For-10)/2) : Math.floor((For-10)/2));
 	}
 	
 	public int getFor() {

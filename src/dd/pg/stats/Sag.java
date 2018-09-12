@@ -11,7 +11,7 @@ public class Sag {
 	public Sag(int Sag) {
 	  
 	  this.Sag = Sag;
-	  this.SAG = (Sag >= 10 ? Math.floor((Sag-10)/2) : Math.floor(Sag/2));
+	  this.SAG = (Sag >= 10 ? Math.floor((Sag-10)/2) : Math.floor((Sag-10)/2));
 	}
 
 	public int getSag() {

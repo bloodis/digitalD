@@ -11,7 +11,7 @@ public class Des {
 	public Des(int Des) {
 	  
 		this.Des = Des;
-		this.DES = (Des >= 10 ? Math.floor((Des-10)/2) : Math.floor(Des/2));
+		this.DES = (Des >= 10 ? Math.floor((Des-10)/2) : Math.floor((Des-10)/2));
 	}
 
 	public int getDes() {

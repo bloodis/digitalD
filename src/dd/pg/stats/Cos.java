@@ -11,7 +11,7 @@ public class Cos {
 	public Cos(int Cos) {
 	  
 	  this.Cos = Cos;
-	  this.COS = (Cos >= 10 ? Math.floor((Cos-10)/2) : Math.floor(Cos/2));
+	  this.COS = (Cos >= 10 ? Math.floor((Cos-10)/2) : Math.floor((Cos-10)/2));
 	}
 
 	public int getCos() {
