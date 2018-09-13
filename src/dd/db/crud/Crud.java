@@ -1,12 +1,11 @@
 package dd.db.crud;
 
-import java.awt.List;
 import java.io.FileReader;
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
+import org.bouncycastle.pqc.math.linearalgebra.Matrix;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -20,35 +19,33 @@ public class Crud {
 	public Crud() {};
 	
 	public void searchSpellByIndex(long index) {
+	 // search result 
+	 JSONObject result = new JSONObject();
 		 
-		// search result 
-		 JSONObject result = new JSONObject();
-		 
-			 try {
+	 	try {
 				 
-				 //loading json in memory
-				 JSONArray dbArray = (JSONArray) parser.parse(new FileReader("E:\\Download\\TestSpellDB.json"));
-				 //json iterator declaration
-				 Iterator it = dbArray.iterator();
-				 
-				 //json scrolling loop
-				 while(it.hasNext())
-				  {					 
-					Object spellObj = it.next();
-				    JSONObject spell = (JSONObject) spellObj;
-				    
-				   //putting search result in 'result' variable
-				    if(index == (long)spell.get("Index")) { 
-				    	
-				    	result = spell;				    	
-				    }
-				  }
-				 
-			 }catch(Exception e){ 
-				 
-				 //print error stack trace
-				 System.err.println(e); 
+			 //loading json in memory
+			 JSONArray dbArray = (JSONArray) parser.parse(new FileReader("E:\\Download\\TestSpellDB.json"));
+			 //json iterator declaration
+			 Iterator it = dbArray.iterator();
+			 
+			 //json scrolling loop
+			 while(it.hasNext())
+			  {					 
+				Object spellObj = it.next();
+			    JSONObject spell = (JSONObject) spellObj;
+			    
+			   //putting search result in 'result' variable
+			    if(index == (long)spell.get("Index")) { 
+			    	
+			    	result = spell;				    	
+			    }
 			  }
+			 
+		 }catch(Exception e){ 
+		   //print error stack trace
+			 System.err.println(e); 
+		  }
 		
 		//printing search result
 		System.out.println((String)result.get("Name"));
@@ -58,45 +55,44 @@ public class Crud {
 	 }
 
 	 
-	 public void searchSpellByWord(String word) {
+	 public LinkedHashMap<String, String[]> searchSpellByWord(String word) {
 		 
 		 //result linked hash map declaration
 		 LinkedHashMap<String,String[]> result = new LinkedHashMap<String,String[]>();
-		 
-			 try {
-				 
-				 JSONArray dbArray = (JSONArray) parser.parse(new FileReader("TestSpellDB.json"));
-				 Iterator it = dbArray.iterator();				 
-				 
-				 while(it.hasNext())
-				  {					 
-					Object spellObj = it.next();
-				    JSONObject spell = (JSONObject) spellObj;
-	   				    	
-				    		//setting every spell name as key for spell attribute value
-				    		String key = (String)spell.get("Name");
-				    		String[] value = new String[3];
-				    		
-				    		//saving every attribute in a string array
-				    		value[0] = (String)spell.get("Level");
-				    		value[1] = (String)spell.get("School");
-				    		value[2] = (String)spell.get("Description");
-				    		
-				    		//putting name as 'key' and attribute as 'value'
-					    	result.put(key, value);
-					    
-				  }
-				  
-				 
-			 }catch(Exception e){ 
-				 System.err.println(e); 
-			  }
+         LinkedHashMap<String,String[]> searchResult = new LinkedHashMap<>();
+	 
+		 try {
+			 
+			 JSONArray dbArray = (JSONArray) parser.parse(new FileReader("TestSpellDB.json"));
+			 Iterator it = dbArray.iterator();				 
+			 
+			 while(it.hasNext())
+			  {					 
+				Object spellObj = it.next();
+			    JSONObject spell = (JSONObject) spellObj;
+   				    	
+			    		//setting every spell name as key for spell attribute value
+			    		String key = (String)spell.get("Name");
+			    		String[] value = new String[3];
+			    		
+			    		//saving every attribute in a string array
+			    		value[0] = (String)spell.get("Level");
+			    		value[1] = (String)spell.get("School");
+			    		value[2] = (String)spell.get("Description");
+			    		
+			    		//putting name as 'key' and attribute as 'value'
+				    	result.put(key, value);
+			 }
+			  			 
+		 }catch(Exception e){ 
+			 System.err.println(e); 
+		  }
 
 		//hashmap scrolling loop
 		 for(Map.Entry<String, String[]> entry : result.entrySet()) {
 			 
 			    String[] value = entry.getValue();
-			    
+
 			    //name splitting to find matching words
 			    String name = entry.getKey();
 			    String[] words = name.split(" ");
@@ -105,17 +101,15 @@ public class Crud {
 				
 		    	//if atleast one word in the name match the search term print the spell name and attributes
 		    	if(word.equals(words[i])) {
-			
-		    		System.out.println("");
-		    		System.out.println(entry.getKey());
-		    		System.out.println(value[0]);
-		    		System.out.println(value[1]);
-		    		System.out.println(value[2]);
-		    		System.out.println("");
+
+		    	    searchResult.put(entry.getKey(),entry.getValue());
+
 		    	}
-		    }	
+		    }
 		 }
-		 
-	}
+
+         return searchResult;
+
+     }
 }
 
