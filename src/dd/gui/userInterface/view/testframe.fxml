@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dd.gui.userInterface.controller.TestFrameController">
+   <children>
+      <AnchorPane prefHeight="754.0" prefWidth="650.0" VBox.vgrow="ALWAYS">
+         <children>
+            <TabPane prefHeight="750.0" prefWidth="650.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+              <tabs>
+                <Tab text="Riassunto">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0">
+                           <children>
+                              <Label layoutX="14.0" layoutY="14.0" text="Nome personaggio" />
+                              <TextField layoutX="14.0" layoutY="31.0" />
+                              <Label layoutX="176.0" layoutY="14.0" text="Nome giocatore" />
+                              <TextField layoutX="176.0" layoutY="31.0" />
+                              <ComboBox layoutX="14.0" layoutY="83.0" prefWidth="150.0" />
+                              <Label layoutX="14.0" layoutY="67.0" text="Razza" />
+                              <ComboBox layoutX="176.0" layoutY="83.0" prefHeight="25.0" prefWidth="80.0" />
+                              <Label layoutX="176.0" layoutY="67.0" text="Taglia" />
+                              <ComboBox layoutX="176.0" layoutY="135.0" prefHeight="25.0" prefWidth="80.0" />
+                              <Label layoutX="177.0" layoutY="119.0" text="Sesso" />
+                              <ComboBox layoutX="14.0" layoutY="135.0" prefWidth="150.0" />
+                              <Label layoutX="14.0" layoutY="119.0" text="Allineamento" />
+                              <Label layoutX="274.0" layoutY="67.0" text="Occhi" />
+                              <TextField layoutX="272.0" layoutY="83.0" prefHeight="25.0" prefWidth="70.0" />
+                              <Label layoutX="351.0" layoutY="67.0" text="Capelli" />
+                              <TextField layoutX="351.0" layoutY="83.0" prefHeight="25.0" prefWidth="70.0" />
+                              <Label layoutX="274.0" layoutY="116.0" text="Altezza" />
+                              <TextField layoutX="274.0" layoutY="135.0" prefHeight="25.0" prefWidth="70.0" />
+                              <Label layoutX="352.0" layoutY="116.0" prefWidth="42.0" text="Peso" />
+                              <TextField layoutX="352.0" layoutY="135.0" prefHeight="25.0" prefWidth="70.0" />
+                              <TextField layoutX="178.0" layoutY="197.0" prefHeight="25.0" prefWidth="40.0" />
+                              <TextField layoutX="219.0" layoutY="197.0" prefHeight="25.0" prefWidth="40.0" />
+                              <TextField layoutX="260.0" layoutY="197.0" prefHeight="25.0" prefWidth="40.0" />
+                              <TextField layoutX="178.0" layoutY="222.0" prefHeight="25.0" prefWidth="40.0" />
+                              <TextField layoutX="219.0" layoutY="222.0" prefHeight="25.0" prefWidth="40.0" />
+                              <TextField layoutX="260.0" layoutY="222.0" prefHeight="25.0" prefWidth="40.0" />
+                              <TextField layoutX="178.0" layoutY="247.0" prefHeight="25.0" prefWidth="40.0" />
+                              <TextField layoutX="219.0" layoutY="247.0" prefHeight="25.0" prefWidth="40.0" />
+                              <TextField layoutX="260.0" layoutY="247.0" prefHeight="25.0" prefWidth="40.0" />
+                              <TextField layoutX="178.0" layoutY="272.0" prefHeight="25.0" prefWidth="40.0" />
+                              <TextField layoutX="219.0" layoutY="272.0" prefHeight="25.0" prefWidth="40.0" />
+                              <TextField layoutX="260.0" layoutY="272.0" prefHeight="25.0" prefWidth="40.0" />
+                              <Label layoutX="30.0" layoutY="180.0" text="Classe" />
+                              <ComboBox layoutX="28.0" layoutY="197.0" prefWidth="150.0" />
+                              <ComboBox layoutX="28.0" layoutY="222.0" prefWidth="150.0" />
+                              <ComboBox layoutX="28.0" layoutY="247.0" prefWidth="150.0" />
+                              <ComboBox layoutX="28.0" layoutY="272.0" prefWidth="150.0" />
+                              <Label layoutX="182.0" layoutY="180.0" prefHeight="17.0" prefWidth="30.0" text="Pf" />
+                              <Label layoutX="224.0" layoutY="180.0" prefHeight="17.0" prefWidth="30.0" text="D" />
+                              <Label layoutX="265.0" layoutY="180.0" prefHeight="17.0" prefWidth="30.0" text="Lv" />
+                              <TextField layoutX="178.0" layoutY="317.0" prefHeight="25.0" prefWidth="40.0" />
+                              <TextField layoutX="219.0" layoutY="317.0" prefHeight="25.0" prefWidth="40.0" />
+                              <TextField layoutX="260.0" layoutY="317.0" prefHeight="25.0" prefWidth="40.0" />
+                              <TextField layoutX="178.0" layoutY="342.0" prefHeight="25.0" prefWidth="40.0" />
+                              <TextField layoutX="219.0" layoutY="342.0" prefHeight="25.0" prefWidth="40.0" />
+                              <TextField layoutX="260.0" layoutY="342.0" prefHeight="25.0" prefWidth="40.0" />
+                              <TextField layoutX="178.0" layoutY="367.0" prefHeight="25.0" prefWidth="40.0" />
+                              <TextField layoutX="219.0" layoutY="367.0" prefHeight="25.0" prefWidth="40.0" />
+                              <TextField layoutX="260.0" layoutY="367.0" prefHeight="25.0" prefWidth="40.0" />
+                              <TextField layoutX="178.0" layoutY="392.0" prefHeight="25.0" prefWidth="40.0" />
+                              <TextField layoutX="219.0" layoutY="392.0" prefHeight="25.0" prefWidth="40.0" />
+                              <TextField layoutX="260.0" layoutY="392.0" prefHeight="25.0" prefWidth="40.0" />
+                              <Label layoutX="30.0" layoutY="300.0" text="Classe di prestigio" />
+                              <ComboBox layoutX="28.0" layoutY="317.0" prefWidth="150.0" />
+                              <ComboBox layoutX="28.0" layoutY="342.0" prefWidth="150.0" />
+                              <ComboBox layoutX="28.0" layoutY="367.0" prefWidth="150.0" />
+                              <ComboBox layoutX="28.0" layoutY="392.0" prefWidth="150.0" />
+                              <Label layoutX="182.0" layoutY="300.0" prefHeight="17.0" prefWidth="30.0" text="Pf" />
+                              <Label layoutX="224.0" layoutY="300.0" prefHeight="17.0" prefWidth="30.0" text="D" />
+                              <Label layoutX="265.0" layoutY="300.0" prefHeight="17.0" prefWidth="30.0" text="Lv" />
+                              <RadioButton layoutX="4.0" layoutY="201.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="15.0" />
+                              <RadioButton layoutX="4.0" layoutY="226.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="15.0" />
+                              <RadioButton layoutX="4.0" layoutY="251.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="15.0" />
+                              <RadioButton layoutX="4.0" layoutY="276.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="15.0" />
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab text="Equipaggiamento">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                  </Tab>
+                  <Tab text="Abilità">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                  </Tab>
+                <Tab text="Inventario">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView editable="true" layoutX="16.0" layoutY="14.0" prefHeight="400.0" prefWidth="619.0">
+                                <columns>
+                                  <TableColumn prefWidth="487.0" text="Nome oggetto" />
+                                  <TableColumn minWidth="0.0" prefWidth="62.0" text="Peso" />
+                                    <TableColumn prefWidth="143.0" text="Quantità" />
+                                </columns>
+                              </TableView>
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab text="Ricerca Incatesimi">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="14.0" layoutY="14.0" text="Nome incantesimo" />
+                              <Label layoutX="14.0" layoutY="71.0" prefHeight="18.0" prefWidth="59.0" text="Risultati" />
+                              <TextField fx:id="spellSearchBar" layoutX="14.0" layoutY="32.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="514.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="122.0" />
+                              <ListView fx:id="spellResultList" layoutX="14.0" layoutY="89.0" onMouseClicked="#SpellResultListSelected" prefHeight="590.0" prefWidth="200.0" style="-fx-border-color: #caccce; -fx-border-width: 1 1 1 1; -fx-border-style: solid solid solid solid;" />
+                              <TextArea fx:id="spellDetails" layoutX="225.0" layoutY="88.0" prefHeight="590.0" prefWidth="412.0" AnchorPane.leftAnchor="225.0" AnchorPane.rightAnchor="13.0" />
+                              <Label layoutX="225.0" layoutY="72.0" text="Dettagli" />
+                              <Button fx:id="SearchBtn" layoutX="537.0" layoutY="32.0" mnemonicParsing="false" onMouseClicked="#SpellSearchOnMouseClick" prefHeight="30.0" prefWidth="100.0" text="Cerca" AnchorPane.rightAnchor="13.0" />
+                           </children></AnchorPane>
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

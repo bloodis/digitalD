@@ -1,16 +1,19 @@
 package dd.exe.runtime;
 
-import dd.gui.userInterface.mainGui;
+import dd.gui.userInterface.controller.MainFrameController;
+import dd.gui.userInterface.view.TestFrame;
+
+import static javafx.application.Application.launch;
 
 public class main {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		GuiData data = new GuiData();
+/*        MainFrameController mainFrameController = new MainFrameController();
+        mainFrameController.showMainFrame();*/
 
-		mainGui gui = new mainGui(data);
+        TestFrame frame = new TestFrame();
 
-
-	}
-
+        frame.appLaunch(args);
+    }
 }

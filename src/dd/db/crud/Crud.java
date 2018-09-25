@@ -110,5 +110,57 @@ public class Crud {
          return searchResult;
 
      }
+
+     public String[] searchSpellByName(String name) {
+
+		 //result linked hash map declaration
+		 LinkedHashMap<String,String[]> result = new LinkedHashMap<String,String[]>();
+         String[] searchResult = null;
+
+		 try {
+
+			 JSONArray dbArray = (JSONArray) parser.parse(new FileReader("TestSpellDB.json"));
+			 Iterator it = dbArray.iterator();
+
+			 while(it.hasNext())
+			  {
+				Object spellObj = it.next();
+			    JSONObject spell = (JSONObject) spellObj;
+
+			    		//setting every spell name as key for spell attribute value
+			    		String key = (String)spell.get("Name");
+			    		String[] value = new String[3];
+
+			    		//saving every attribute in a string array
+			    		value[0] = (String)spell.get("Level");
+			    		value[1] = (String)spell.get("School");
+			    		value[2] = (String)spell.get("Description");
+
+			    		//putting name as 'key' and attribute as 'value'
+				    	result.put(key, value);
+			 }
+
+		 }catch(Exception e){
+			 System.err.println(e);
+		  }
+
+		//hashmap scrolling loop
+		 for(Map.Entry<String, String[]> entry : result.entrySet()) {
+
+			    String[] value = entry.getValue();
+
+			    //name splitting to find matching words
+			    String entryName = entry.getKey();
+
+		    	//if atleast one word in the name match the search term print the spell name and attributes
+		    	if(entryName.equals(name)) {
+
+					searchResult = entry.getValue();
+				}
+		 }
+
+         return searchResult;
+
+     }
 }
 
